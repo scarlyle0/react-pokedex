@@ -41,24 +41,25 @@ function App() {
       {pokemonData.map((data) => {
         return(
           <div className='container'>
-            <img />
+            <img src={data.sprites.versions["generation-v"]["black-white"].animated.front_default} alt="Pokemon"/>
             <div className='divTable'>
-              <div className='divTableBody'></div>
-              <div className='divTableRow'>
-                <div className='divTableCell'>Type</div>
-                <div className='divTableCell'>{pokemonType}</div>
+              <div className='divTableBody'>
+                <div className='divTableRow'>
+                  <div className='divTableCell'>Type</div>
+                  <div className='divTableCell'>{pokemonType}</div>
+                </div>
+                <div className='divTableRow'>
+                  <div className='divTableCell'>Height</div>
+                  <div className='divTableCell'>{" "}{Math.round(data.height * 3.9)} "</div> 
+                </div>
+                <div className='divTableRow'>
+                  <div className='divTableCell'>Weight</div>
+                  <div className='divTableCell'>{" "}{Math.round(data.weight / 4.3)} lbs</div>
+                </div>
+                <div className='divTableRow'>
+                  <div className='divTableCell'>Placeholder</div>
+                  <div className='divTableCell'>{data.game_indices.length}</div>
               </div>
-              <div className='divTableRow'>
-                <div className='divTableCell'>Height</div>
-                <div className='divTableCell'>{" "}{Math.round(data.height * 3.9)} "</div> 
-              </div>
-              <div className='divTableRow'>
-                <div className='divTableCell'></div>
-                <div className='divTableCell'>{pokemonType}</div>
-              </div>
-              <div className='divTableRow'>
-                <div className='divTableCell'>Type</div>
-                <div className='divTableCell'>{pokemonType}</div>
               </div>
             </div>
           </div>
