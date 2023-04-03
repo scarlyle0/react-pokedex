@@ -62,7 +62,7 @@ function App() {
                   <div className='divTableCell'>{pokemonType}</div>
                 </div>
                 <div className='divTableRow'>
-                  <div className='divTableCell'>Placeholder</div>
+                  <div className='divTableCell'>Yo</div>
                   <div className='divTableCell'>{data.game_indices.length}</div>
                   <div className='divTableCell'>{pokemonType}</div>
               </div>
