@@ -20,6 +20,7 @@
   font-weight: bold;
 }
 
+.divTableCellNone,
 .divTableCellnormal,
 .divTableCellfire,
 .divTableCellwater,
@@ -55,6 +56,10 @@
 }
 
 .divTableCell:nth-child(1n){
+  background-color: gainsboro;
+}
+
+.divTableCellNone{
   background-color: gainsboro;
 }
 

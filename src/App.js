@@ -4,6 +4,7 @@ import axios from "axios"
 
 function App() {
   const [pokemontypevalue, setpokemontypevalue] = useState("n")
+  const [pokemontypevaluetwo, setpokemontypevaluetwo] = useState("n")
   const [ID, setID] = useState("None")
   const [pokemon, setPokemon] = useState("pikachu");
   const [pokemonData, setPokemonData] = useState([]);
@@ -45,9 +46,83 @@ function App() {
   }
 
   useEffect(() => {
+    if (pokemonType === 'normal')
+    setpokemontypevalue('divTableCellnormal')
+    if (pokemonType === 'fire')
+    setpokemontypevalue('divTableCellfire')
+    if (pokemonType === 'water')
+    setpokemontypevalue('divTableCellwater')
+    if (pokemonType === 'grass')
+    setpokemontypevalue('divTableCellgrass')
+    if (pokemonType === 'electric')
+    setpokemontypevalue('divTableCellelectric')
+    if (pokemonType === 'ice')
+    setpokemontypevalue('divTableCellice')
+    if (pokemonType === 'fighting')
+    setpokemontypevalue('divTableCellfighting')
     if (pokemonType === 'poison')
     setpokemontypevalue('divTableCellpoison')
-  }, [pokemonType])
+    if (pokemonType === 'ground')
+    setpokemontypevalue('divTableCellground')
+    if (pokemonType === 'flying')
+    setpokemontypevalue('divTableCellflying')
+    if (pokemonType === 'psychic')
+    setpokemontypevalue('divTableCellpsychic')
+    if (pokemonType === 'bug')
+    setpokemontypevalue('divTableCellbug')
+    if (pokemonType === 'rock')
+    setpokemontypevalue('divTableCellrock')
+    if (pokemonType === 'ghost')
+    setpokemontypevalue('divTableCellghost')
+    if (pokemonType === 'dark')
+    setpokemontypevalue('divTableCelldark')
+    if (pokemonType === 'dragon')
+    setpokemontypevalue('divTableCelldragon')
+    if (pokemonType === 'steel')
+    setpokemontypevalue('divTableCellsteel')
+    if (pokemonType === 'fairy')
+    setpokemontypevalue('divTableCellfairy')
+
+    if (pokemonTypeTwo === 'None')
+    setpokemontypevaluetwo('divTableCellNone')
+    if (pokemonTypeTwo === 'normal')
+    setpokemontypevaluetwo('divTableCellnormal')
+    if (pokemonTypeTwo === 'fire')
+    setpokemontypevaluetwo('divTableCellfire')
+    if (pokemonTypeTwo === 'water')
+    setpokemontypevaluetwo('divTableCellwater')
+    if (pokemonTypeTwo === 'grass')
+    setpokemontypevaluetwo('divTableCellgrass')
+    if (pokemonTypeTwo === 'electric')
+    setpokemontypevaluetwo('divTableCellelectric')
+    if (pokemonTypeTwo === 'ice')
+    setpokemontypevaluetwo('divTableCellice')
+    if (pokemonTypeTwo === 'fighting')
+    setpokemontypevaluetwo('divTableCellfighting')
+    if (pokemonTypeTwo === 'poison')
+    setpokemontypevaluetwo('divTableCellpoison')
+    if (pokemonTypeTwo === 'ground')
+    setpokemontypevaluetwo('divTableCellground')
+    if (pokemonTypeTwo === 'flying')
+    setpokemontypevaluetwo('divTableCellflying')
+    if (pokemonTypeTwo === 'psychic')
+    setpokemontypevaluetwo('divTableCellpsychic')
+    if (pokemonTypeTwo === 'bug')
+    setpokemontypevaluetwo('divTableCellbug')
+    if (pokemonTypeTwo === 'rock')
+    setpokemontypevaluetwo('divTableCellrock')
+    if (pokemonTypeTwo === 'ghost')
+    setpokemontypevaluetwo('divTableCellghost')
+    if (pokemonTypeTwo === 'dark')
+    setpokemontypevaluetwo('divTableCelldark')
+    if (pokemonTypeTwo === 'dragon')
+    setpokemontypevaluetwo('divTableCelldragon')
+    if (pokemonTypeTwo === 'steel')
+    setpokemontypevaluetwo('divTableCellsteel')
+    if (pokemonTypeTwo === 'fairy')
+    setpokemontypevaluetwo('divTableCellfairy')
+    
+  }, [pokemonType, pokemonTypeTwo])
 
 
   return (
@@ -73,7 +148,7 @@ function App() {
                 <div className='divTableRow'>
                   <div className='divTableCell'>Type</div>
                   <div className={pokemontypevalue}>{pokemonType.charAt(0).toUpperCase() + pokemonType.slice(1)}</div>
-                  <div className='divTableCell'>{pokemonTypeTwo.charAt(0).toUpperCase() + pokemonTypeTwo.slice(1)}</div>
+                  <div className={pokemontypevaluetwo}>{pokemonTypeTwo.charAt(0).toUpperCase() + pokemonTypeTwo.slice(1)}</div>
                 </div>
                 <div className='divTableRow'>
                   <div className='divTableCell'>Height</div>
