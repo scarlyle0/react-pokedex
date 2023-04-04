@@ -20,11 +20,29 @@
   font-weight: bold;
 }
 
+.divTableCellnormal,
+.divTableCellfire,
+.divTableCellwater,
+.divTableCellgrass,
+.divTableCellelectric,
+.divTableCellice,
+.divTableCellfighting,
+.divTableCellpoison,
+.divTableCellground,
+.divTableCellflying,
+.divTableCellpsychic,
+.divTableCellbug,
+.divTableCellrock,
+.divTableCellghost,
+.divTableCelldark,
+.divTableCelldragon,
+.divTableCellsteel,
+.divTableCellfairy,
 .divTableCell,
 .divTableHead{
   border: 1px solid #999999;
   display: table-cell;
-  padding: 3px 10px;
+  padding: 6px 13px;
 }
 
 .divTableFoot{
@@ -38,6 +56,78 @@
 
 .divTableCell:nth-child(1n){
   background-color: gainsboro;
+}
+
+.divTableCellnormal{
+  background-color: #A8A77A;
+}
+
+.divTableCellfire{
+  background-color: #EE8130;
+}
+
+.divTableCellwater{
+  background-color: #6390F0;
+}
+
+.divTableCellgrass{
+  background-color: #7AC74C;
+}
+
+.divTableCellelectric{
+  background-color: #F7D02C;
+}
+
+.divTableCellice{
+  background-color: #96D9D6;
+}
+
+.divTableCellfighting{
+  background-color: #C22E28;
+}
+
+.divTableCellpoison{
+  background-color: #A33EA1;
+}
+
+.divTableCellground{
+  background-color: #E2BF65;
+}
+
+.divTableCellflying{
+  background-color: #A98FF3;
+}
+
+.divTableCellpsychic{
+  background-color: #F95587;
+}
+
+.divTableCellbug{
+  background-color: #A6B91A;
+}
+
+.divTableCellrock{
+  background-color: #B6A136;
+}
+
+.divTableCellghost{
+  background-color: #735797;
+}
+
+.divTableCelldark{
+  background-color: #705746;
+}
+
+.divTableCelldragon{
+  background-color: #6F35FC;
+}
+
+.divTableCellsteel{
+  background-color: #B7B7CE;
+}
+
+.divTableCellfairy{
+  background-color: #D685AD;
 }
 
 .container{
