@@ -6,4 +6,4 @@ Uses information from PokeAPI
 
 ### `Find on github pages`
 
-Link to the web app: https://hapaboi.github.io/react-pokedex/
+Link to the web app: https://stcarlyle.github.io/react-pokedex/
