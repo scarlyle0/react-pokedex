@@ -5,9 +5,9 @@
 .divTable{
   display: table;
   max-width: 20em;
-  float: right;
   display: flex;
   align-items: center;
+  border: 5;
 }
 
 .divTableRow{
@@ -43,7 +43,7 @@
 .divTableHead{
   border: 1px solid #999999;
   display: table-cell;
-  padding: 6px 13px;
+  padding: 13px 13px;
 }
 
 .divTableFoot{
@@ -135,15 +135,29 @@
   background-color: #D685AD;
 }
 
+.yozama{
+  display: flex;
+  
+}
+
 .container{
   display: flex;
+  flex-direction: column;
   opacity: 0.9;
   background-color: #99aaab;
   justify-content: center;
 }
 
+.rowone,
+.rowtwo{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+
 img{
-  height: 14em;
+  height: 12em;
 }
 
 input{

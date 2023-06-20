@@ -133,40 +133,90 @@ function App() {
           </input>
         </label>
       </form>
+
+
       {pokemonData.map((data) => {
         return(
           <div className='container'>
-            <img src={data.sprites.versions["generation-v"]["black-white"].animated.front_default} alt="Pokemon"/>
-            <img src={data.sprites.versions["generation-v"]["black-white"].animated.front_shiny} alt="Pokemon"/>
-            <div className='divTable'>
-              <div className='divTableBody'>
-                <div className='divTableRow'>
-                  <div className='divTableCell'>ID</div>
-                  <div className='divTableCell'>{ID}</div>
-                  <div className='divTableCell'></div>
+
+
+            <div className='rowone'>
+
+
+              <img src={data.sprites.versions["generation-v"]["black-white"].animated.front_default} alt="Pokemon"/>
+              <img src={data.sprites.versions["generation-v"]["black-white"].animated.front_shiny} alt="Pokemon"/>
+
+
+              <div className='divTable'>
+                <div className='divTableBody'>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>ID</div>
+                    <div className='divTableCell'>{ID}</div>
+                    <div className='divTableCell'></div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Type</div>
+                    <div className={pokemontypevalue}>{pokemonType.charAt(0).toUpperCase() + pokemonType.slice(1)}</div>
+                    <div className={pokemontypevaluetwo}>{pokemonTypeTwo.charAt(0).toUpperCase() + pokemonTypeTwo.slice(1)}</div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Height</div>
+                    <div className='divTableCell'>{" "}{Math.round(data.height * 3.9)}"</div> 
+                    <div className='divTableCell'></div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Weight</div>
+                    <div className='divTableCell'>{" "}{Math.round(data.weight / 4.3)} lbs</div>
+                    <div className='divTableCell'></div>
+                  </div>
                 </div>
-                <div className='divTableRow'>
-                  <div className='divTableCell'>Type</div>
-                  <div className={pokemontypevalue}>{pokemonType.charAt(0).toUpperCase() + pokemonType.slice(1)}</div>
-                  <div className={pokemontypevaluetwo}>{pokemonTypeTwo.charAt(0).toUpperCase() + pokemonTypeTwo.slice(1)}</div>
-                </div>
-                <div className='divTableRow'>
-                  <div className='divTableCell'>Height</div>
-                  <div className='divTableCell'>{" "}{Math.round(data.height * 3.9)}"</div> 
-                  <div className='divTableCell'></div>
-                </div>
-                <div className='divTableRow'>
-                  <div className='divTableCell'>Weight</div>
-                  <div className='divTableCell'>{" "}{Math.round(data.weight / 4.3)} lbs</div>
-                  <div className='divTableCell'></div>
-                </div>
-                <div className='divTableRow'>
-                  <div className='divTableCell'>Yo</div>
-                  <div className='divTableCell'>{data.game_indices.length}</div>
-                  <div className='divTableCell'></div>
               </div>
+
+
+              <div className='divTable'>
+                <div className='divTableBody'>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Base Stat Total</div>
+                    <div className='divTableCell'>{data.stats[0].base_stat + data.stats[1].base_stat + data.stats[2].base_stat + data.stats[3].base_stat + data.stats[4].base_stat + data.stats[5].base_stat}</div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>HP</div>
+                    <div className='divTableCell'>{data.stats[0].base_stat}</div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Attack</div>
+                    <div className='divTableCell'>{data.stats[1].base_stat}</div> 
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Defense</div>
+                    <div className='divTableCell'>{data.stats[2].base_stat}</div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Sp. Attack</div>
+                    <div className='divTableCell'>{data.stats[3].base_stat}</div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Sp. Defense</div>
+                    <div className='divTableCell'>{data.stats[4].base_stat}</div>
+                  </div>
+                  <div className='divTableRow'>
+                    <div className='divTableCell'>Speed</div>
+                    <div className='divTableCell'>{data.stats[5].base_stat}</div>
+                  </div>
+                </div>
               </div>
+
+
             </div>
+
+
+            <div className='rowtwo'>
+
+
+
+            </div>
+
+
           </div>
         )
       })}
